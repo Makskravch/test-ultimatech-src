@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "cambriab";
+  src: url("cambriab.eot");
+  src: url("cambriab.eot?#iefix") format("embedded-opentype"),
+       url("cambriab.ttf") format("truetype"),
+       url("cambriab.woff") format("woff"),
+       url("cambriab.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
