@@ -3,20 +3,18 @@ $mobile-portrait: 320px;
 $mobile-landscape: 480px;
 $tablet-portrait: 768px;
 $tablet-landscape: 1280px;
-$desktop-extra: 1330px;
-$break-max: 1600px;
+$desktop: 1440px;
+$desktop-extra: 1600px;
 // FONT SIZE
 $base_font_size: 10px;
 // WIDTH
 $site_width: 1920;
 // COLOR
-$color-primary: #ff9900;
-$color-additional: #ff7549;
-$color-background: #fff;
-$color-heading: #000;
-$color-text: #000;
-$color-link: #1943ef;
+$color-primary: #f73427;
 $color-hovered: #bcd0e5;
+$color-border: #464646;
 
-$color-white: #fff;
-$color-black: #000;
+$color-text-primary: #f73427;
+$color-text-white: #fff;
+$color-text-black: #000;
+$color-text-gray: #464646;

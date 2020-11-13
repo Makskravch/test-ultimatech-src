@@ -3,11 +3,44 @@
 @@include('_head.html')
 
 <body>
-
+  <!-- MAIN -->
   <main class="main" id="main">
-    Main
+    <!-- Banner -->
+    <div class="banner">
+      <picture class="banner__picture">
+        <img src="img/witcher.png" alt="witcher">
+      </picture>
+      <div class="banner__description">
+        <h1 class="banner__title">
+          300% <span>WELCOME BONUS</span>
+        </h1>
+        <div class="banner__promo-block">
+          <input class="banner__promo-code" type="text" name="code" value="WITCHER" disabled>
+          <button class="banner__btn" type="button">
+            COPY CODE
+          </button>
+        </div>
+        <a href="#" class="banner__link">
+          <span>
+            PLAY NOW
+          </span>
+        </a>
+      </div>
+      <!-- Banner footer -->
+      <div class="banner__footer">
+        <picture class="logo banner__logo">
+          <a href="#">
+            <img src="img/logo.png" alt="logo">
+          </a>
+        </picture>
+        <p class="banner__info">
+          *Terms and Conditions Apply
+        </p>
+      </div>
+    </div>
   </main>
 
   @@include('_scripts.html')
 </body>
+
 </html>

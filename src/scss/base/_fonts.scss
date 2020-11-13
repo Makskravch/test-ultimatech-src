@@ -1,10 +1,31 @@
 @font-face {
-  font-family: "";
-  src: url("../fonts/.eot");
-  src: url("../fonts/.eot?#iefix") format("embedded-opentype"),
-       url("../fonts/.ttf") format("truetype"),
-       url("../fonts/.woff") format("woff"),
-       url("../fonts/.woff2") format("woff2");
+  font-family: "Cambria";
+  src: url("../fonts/cambria/cambria.woff2") format("woff2"),
+       url("../fonts/cambria/cambria.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cambriab";
+  src: url("../fonts/cambriab/cambriab.woff2") format("woff2"),
+       url("../fonts/cambriab/cambriab.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cambriai";
+  src: url("../fonts/cambriai/cambriai.woff2") format("woff2"),
+       url("../fonts/cambriai/cambriai.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cambriaz";
+  src: url("../fonts/cambriaz/cambriaz.woff2") format("woff2"),
+       url("../fonts/cambriaz/cambriaz.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
