@@ -69,6 +69,30 @@
   border-radius: 80px;
   margin: 37px 0 60px;
   overflow: hidden;
+  &.copied {
+    .input-wrap::before {
+      opacity: 1;
+    }
+    .banner__promo-code {
+      color: transparent;
+    }
+  }
+}
+.input-wrap {
+  position: relative;
+  &::before {
+    content: "Copied";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px 10px;
+    border: 1px solid $color-border;
+    border-radius: 5px;
+    background-color: $color-bg-gray;
+    opacity: 0;
+    transition: 0.3s;
+  }
 }
 .banner__promo-code {
   @include font(40px, 78px, "Arial");
@@ -80,9 +104,14 @@
   color: $color-text-primary;
   letter-spacing: 4px;
   text-align: center;
+  transition: 0.3s;
+  pointer-events: none;
   @include respond-to(desktop_extra) {
     @include font(30px, 68px, "Arial");
     width: 250px;
+  }
+  &::selection {
+    background: transparent;
   }
 }
 .banner__btn {
