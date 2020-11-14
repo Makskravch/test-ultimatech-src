@@ -5,6 +5,10 @@
   align-items: center;
   justify-content: space-between;
   min-height: 100vh;
+  @include respond-to(tablet_minus) {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+  }
 }
 .banner__picture {
   position: relative;
@@ -13,6 +17,10 @@
   z-index: 1;
   @include respond-to(desktop_extra) {
     width: 55%;
+  }
+  @include respond-to(tablet_minus) {
+    width: 100%;
+    align-self: center;
   }
   &::before {
     content: "";
@@ -45,6 +53,15 @@
     width: 45%;
     transform: translate(0);
   }
+  @include respond-to(tablet_minus) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 20px;
+    z-index: 1;
+  }
 }
 .banner__title {
   @include font(208px, 208px, "Cambriab");
@@ -52,6 +69,12 @@
   text-align: center;
   @include respond-to(desktop_extra) {
     @include font(150px, 160px, "Cambriab");
+  }
+  @include respond-to(desktop) {
+    @include font(120px, 130px, "Cambriab");
+  }
+  @include respond-to(mobile_portrait) {
+    @include font(90px, 100px, "Cambriab");
   }
 }
 .banner__title span {
@@ -61,6 +84,12 @@
   @include respond-to(desktop_extra) {
     @include font(50px, 70px, "Cambriab");
   }
+  @include respond-to(desktop) {
+    @include font(40px, 50px, "Cambriab");
+  }
+  @include respond-to(mobile_portrait) {
+    @include font(30px, 45px, "Cambriab");
+  }
 }
 .banner__promo-block {
   display: flex;
@@ -69,6 +98,12 @@
   border-radius: 80px;
   margin: 37px 0 60px;
   overflow: hidden;
+  @include respond-to(desktop) {
+    margin: 40px 0;
+  }
+  @include respond-to(tablet_minus) {
+    background-color: $color-bg-gray-trnsp;
+  }
   &.copied {
     .input-wrap::before {
       opacity: 1;
@@ -90,8 +125,12 @@
     border: 1px solid $color-border;
     border-radius: 5px;
     background-color: $color-bg-gray;
+    color: $color-text-white;
     opacity: 0;
     transition: 0.3s;
+    @include respond-to(tablet_minus) {
+      border: 1px solid $color-primary;
+    }
   }
 }
 .banner__promo-code {
@@ -110,6 +149,15 @@
     @include font(30px, 68px, "Arial");
     width: 250px;
   }
+  @include respond-to(desktop) {
+    @include font(25px, 55px, "Arial");
+    width: 230px;
+  }
+  @include respond-to(mobile_portrait) {
+    @include font(18px, 40px, "Arial");
+    width: 150px;
+    letter-spacing: 3px;
+  }
   &::selection {
     background: transparent;
   }
@@ -125,6 +173,15 @@
   letter-spacing: 2px;
   cursor: pointer;
   z-index: 1;
+  @include respond-to(desktop) {
+    @include font(14px, 20px, "Arial");
+    width: 170px;
+  }
+  @include respond-to(mobile_portrait) {
+    @include font(12px, 18px, "Arial");
+    width: 120px;
+    letter-spacing: 1px;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -161,6 +218,16 @@
   @include respond-to(desktop_extra) {
     min-width: 300px;
   }
+  @include respond-to(desktop) {
+    min-width: 250px;
+    padding: 20px;
+  }
+  @include respond-to(mobile_portrait) {
+    @include font(14px, 20px, "Arial");
+    min-width: 170px;
+    padding: 13px;
+    letter-spacing: 1px;
+  }
   &::before {
     content: "";
     @include background(url("../img/sparks.gif"));
@@ -183,6 +250,7 @@
   }
 }
 .banner__footer {
+  @include font(14px, 22px, "Arial");
   position: absolute;
   left: 0;
   bottom: 0;
@@ -192,6 +260,24 @@
   width: 100%;
   padding: 0 70px 58px;
   z-index: 1;
+  @include respond-to(desktop_extra) {
+    padding: 0 40px 30px;
+  }
+  @include respond-to(desktop_minus) {
+    @include font(14px, 22px, "Arial");
+    padding: 0 20px 20px;
+  }
+  @include respond-to(mobile_portrait) {
+    @include font(10px, 16px, "Arial");
+  }
+}
+.banner__logo {
+  @include respond-to(desktop_minus) {
+    width: 170px;
+  }
+  @include respond-to(mobile_portrait) {
+    width: 100px;
+  }
 }
 .banner__info {
   color: $color-text-gray;
